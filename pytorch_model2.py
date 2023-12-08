@@ -88,7 +88,7 @@ base_haz_params = torch.tensor([1, 1], dtype = torch.float32, requires_grad = Tr
 # Optimizer
 import torch.optim as optim
 
-start_learning_rate = 7e-6
+start_learning_rate = 5e-5
 opt_param_set = list(model.parameters()) + [base_haz_params]
 optimizer = optim.Adam(params = opt_param_set, lr = start_learning_rate)
 
@@ -135,7 +135,7 @@ from datetime import datetime
 #timestamp for only the hour and minutes
 timestamp = datetime.now().strftime('%H_%M')
 
-num_epochs = 750
+num_epochs = 500
 epoch_index = 1
 best_tloss = 1e6
 
